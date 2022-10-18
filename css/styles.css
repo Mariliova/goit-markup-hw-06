@@ -120,9 +120,10 @@ body {
 }
 
 .page-footer .form-btn {
-  position: relative;
-  display: block;
-  padding: 10px 62px 10px 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 28px;
 
   font-weight: 700;
   line-height: 1.88;
@@ -137,7 +138,7 @@ body {
 
 .page-footer .form-btn:hover,
 .page-footer .form-btn:focus {
-     background-color: var(--color-accent-hover);
+  background-color: var(--color-accent-hover);
 }
 
 /* Header */
@@ -466,10 +467,6 @@ body {
 }
 
 .btn-icon {
-  position: absolute;
-  top: 50%;
-  left: 148px;
-  transform: translateY(-50%);
   fill: var(--color-white);
 }
 
@@ -883,7 +880,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 10px;
+}
+
+.modal .form-group:not(:first-child) {
+  margin-top: 10px;
 }
 
 .modal .form-group .form-label {
@@ -973,10 +973,6 @@ body {
 }
 
 .form-policy .form-icon {
-  /* display: inline-block;
-    width: 16px;
-    height: 15px; */
-
   border: 2px solid var(--color-primary);
   border-radius: 3px;
 }
@@ -984,9 +980,6 @@ body {
 .form-check:checked + .form-icon {
   border-color: transparent;
   background-color: var(--color-accent);
-  /* background-image: url(../images/check.svg);
-    background-size: contain;
-    background-origin: border-box; */
 }
 
 .form-policy .form-text {
